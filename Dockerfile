@@ -1,4 +1,4 @@
-FROM python:3.9-alpine3.13
+FROM python:3.9-slim-buster
 LABEL maintainer="londonappdeveloper.com"
 
 ENV PYTHONUNBUFFERD 1
@@ -19,7 +19,7 @@ RUN python -m venv /py && \
     rm -rf /tmp && \
     adduser \
         --disabled-password \
-        --no-create-home \
+        --home /home/django-user \
         django-user
 
 ENV PATH="/py/bin:$PATH"
