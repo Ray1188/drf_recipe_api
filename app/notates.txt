@@ -2,3 +2,9 @@ docker-compose run --rm app sh -c 'flake8'
 docker-compose run --rm app sh -c 'python manage.py test'
 docker-compose run --rm app sh -c 'django-admin startproject app .'
 docker-compose up
+python manage.py migrate
+
+git rm -r --cached app/app/__pycache__
+git show --name-only HEAD - check last commited files 
+git reset HEAD~1 - without index
+git reset --soft HEAD~1 - with index
