@@ -6,6 +6,9 @@ __pycache__/
 app/app/__pycache__/
 app\core\__pycache__/
 
+# ide 
+.vscode/
+
 # C extensions
 *.so
 
